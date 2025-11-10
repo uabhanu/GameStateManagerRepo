@@ -1,6 +1,6 @@
 # 🏛️ Modular Game Flow System (Singleton & State Pattern)
 
-**Project Name:** GameState-Flow-Manager | **Status:** Architectural Prototype | **Platform:** PC / WebGL
+**Project Name:** GameStateManager | **Status:** Architectural Prototype | **Platform:** PC / WebGL
 
 ---
 
