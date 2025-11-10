@@ -37,6 +37,23 @@ This system is built upon three fundamental design patterns to ensure clean, pro
 | **Architecture** | Singleton, State Machine (FSM), Observer | Ensures scalable, maintainable, and loosely coupled codebase. |
 | **Input** | Unity New Input System | Modern, event-based input handling. |
 
+### 📁 Project Structure (Key Scripts)
+
+    Assets/
+    ├── Scripts/
+    │   ├── Managers/
+    │   │   ├── GameStateManager.cs (Singleton & State Controller)
+    │   ├── States/
+    │   │   ├── AbstractGameState.cs (Base Class)
+    │   │   ├── MenuState.cs
+    │   │   ├── GameplayState.cs
+    |   |   ├── GameOverState.cs
+    │   ├── Utilities/
+    |   |   ├── GameEvents.cs (Future: Handles Observer Pattern)
+    ├── Scenes/
+        ├── MainScene.unity (Minimal setup scene)
+
+
 ## 🗓️ Roadmap (Phase 1: Game Flow)
 The goal is to complete the core flow and ensure every component is unit-testable.
 
