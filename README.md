@@ -38,9 +38,7 @@ This system is built upon three fundamental design patterns to ensure clean, pro
 | **Input** | Unity New Input System | Modern, event-based input handling. |
 
 ## 📁 Project Structure (Key Scripts)
-The structure is organised by responsibility (Managers, States, Utilities):
-
-Assets
+The structure is organised by responsibility (Managers, States, Utilities): Assets
 ├── Scripts
 │   ├── Managers
 │   │   ├── GameStateManager.cs (Singleton & State Controller)
