@@ -40,18 +40,18 @@ This system is built upon three fundamental design patterns to ensure clean, pro
 ## 📁 Project Structure (Key Scripts)
 The structure is organised by responsibility (Managers, States, Utilities):
 
-Assets/
-├── Scripts/
-│   ├── Managers/
+Assets
+├── Scripts
+│   ├── Managers
 │   │   ├── GameStateManager.cs (Singleton & State Controller)
-│   ├── States/
+│   ├── States
 │   │   ├── AbstractGameState.cs (Base Class)
 │   │   ├── MenuState.cs
 │   │   ├── GameplayState.cs
 │   │   └── GameOverState.cs
-│   └── Utilities/
+│   └── Utilities
 │       └── GameEvents.cs (Future: Handles Observer Pattern)
-└── Scenes/
+└── Scenes
 └── MainScene.unity (Minimal setup scene)
 
 ## 🗓️ Roadmap (Phase 1: Game Flow)
