@@ -14,18 +14,18 @@ This prototype serves as proof of proficiency in core C# object-oriented design 
 This system is built upon three fundamental design patterns to ensure clean, professional code.
 
 ### 1. The Game Flow Manager (Singleton Pattern)
-* **Purpose:** Ensures a single, persistent instance of the **`GameFlowManager`** exists throughout the application lifecycle.
+* **Purpose:** Ensures a single, persistent instance of the **`GameStateManager`** exists throughout the application lifecycle.
 * **Benefit:** Provides a reliable, globally accessible entry point for state changes without the need for error-prone `FindObjectOfType<>()` calls.
 
 ### 2. State Management (State Pattern / FSM)
 * **Purpose:** Defines the core game loop and cleanly separates the logic for each stage of the game.
 * **Structure:** Utilises a parent class (`AbstractGameState`) and multiple concrete state classes (e.g., `MenuState`, `GameplayState`).
-* **Benefit:** Allows for easy addition or modification of game states (e.g., adding a `CutsceneState` or `LoadingState`) without modifying the core `GameFlowManager` class.
+* **Benefit:** Allows for easy addition or modification of game states (e.g., adding a `CutsceneState` or `LoadingState`) without modifying the core `GameStateManager` class.
 
 ### 3. Decoupled Communication (Observer Pattern - Events)
 * **Purpose:** Enables systems (like UI, Audio, Score) to react to game changes without direct references to the source that initiated the change.
 * **Implementation (Future Branch):** Will use C# Events and Delegates (or Scriptable Objects) to create a **`GameEvents`** utility class.
-* **Example:** When the `GameFlowManager` transitions to `GameplayState`, it fires an `OnGameStarted` event. The `UIManager` simply **subscribes** to this event to show the HUD, keeping the code clean.
+* **Example:** When the `GameStateManager` transitions to `GameplayState`, it fires an `OnGameStarted` event. The `UIManager` simply **subscribes** to this event to show the HUD, keeping the code clean.
 
 ---
 
@@ -43,7 +43,7 @@ The structure is organised by responsibility (Managers, States, Utilities):
 Assets/
 ├── Scripts/
 │   ├── Managers/
-│   │   ├── GameFlowManager.cs (Singleton & State Controller)
+│   │   ├── GameStateManager.cs (Singleton & State Controller)
 │   ├── States/
 │   │   ├── AbstractGameState.cs (Base Class)
 │   │   ├── MenuState.cs
