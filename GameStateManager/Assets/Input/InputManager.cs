@@ -23,16 +23,19 @@ namespace Input
         private void OnEnable() { _inputActions.Player.Enable(); }
 
         private void OnDisable() { _inputActions.Player.Disable(); }
-        
+
         #endregion
-        
+
         #region Input Callback Methods
 
         public void OnAttack(InputAction.CallbackContext callbackContext)
         {
             if(callbackContext.performed)
             {
-                if(GameStateManager.Instance.CurrentState is GameplayState) { GameStateManager.Instance.TransitionToState(typeof(GameOverState)); }
+                if(GameStateManager.Instance.CurrentState is GameplayState)
+                {
+                    GameStateManager.Instance.TransitionToState(typeof(GameOverState));
+                }
             }
         }
 
@@ -59,7 +62,7 @@ namespace Input
         public void OnNext(InputAction.CallbackContext callbackContext) {}
         public void OnPrevious(InputAction.CallbackContext callbackContext) {}
         public void OnSprint(InputAction.CallbackContext callbackContext) {}
-        
+
         #endregion
     }
 }
